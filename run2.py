@@ -80,8 +80,8 @@ def get_price_range():
         price_high.append(put_data['impact_price'].sum())
     price_range = pd.DataFrame()
     price_range['date'] = expiration_dates
-    price_range['low']  = price_low
-    price_range['high'] = price_high
+    price_range['call_thresh']  = price_low
+    price_range['put_thresh'] = price_high
     return price_range
 
 files = get_files(datapath)
